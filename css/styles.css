@@ -6,10 +6,24 @@ body {
 	background-color: #fcfcfc;
 }
 
+
 header {
 	align-content: center;
 	display: block;
 }
+
+
+main {
+	margin-top: 50px;
+}
+
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+
 
 #logo {
 	display: block;
@@ -17,27 +31,19 @@ header {
 	margin-right: auto;
 }
 
+
 .delimiter {
     border: 0;
 	height: 2px;
-	width: 45%;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-h1 {
-	font-family: courier;
-	text-align: center;
+.center {
+	display: flex;
+	justify-content: center;
 }
-
 
 /* Navigation bar */
-nav {
-	float: none;
-	position: absolute;
-	top: 170px;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
 
 nav ul{
     display: block;
@@ -45,13 +51,14 @@ nav ul{
     font-family: "Century Gothic", Verdana, Arial, Sans-Serif;    
     margin: 0;
     padding: 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 nav ul li {
     float: left;
     position: relative;
 }
+
 
 nav ul li a {
     float: left;
@@ -69,14 +76,18 @@ nav ul li a:hover {
 	color: #fff;
 }
 
+
 /* child items */
 nav ul li ul {
 	display: none;
+	font-size: 0.9em;
 }
 
+
 nav ul li:hover ul {
-    display: block;
+	display: block;
 }
+
 
 nav ul li ul {
 	float: left;
@@ -86,10 +97,12 @@ nav ul li ul {
 	padding: 0;
 }
 
+
 nav ul li ul li {
 	float: none;
 	clear: none;
 }
+
 
 nav ul li ul li a {
     float: left;
@@ -99,4 +112,33 @@ nav ul li ul li a {
     color: red;
     text-transform: uppercase;
     margin-right: 10px;
+}
+
+section {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.collection-row {
+    clear: both;
+    width: 100%;
+}
+
+.collection-item {
+    float: left;
+	max-height: 400px;
+	margin: 1%;
+	max-width: 300px;
+
+	/*box-shadow: -5px 5px 20px #888888;*/
+
+	border-radius: .5em;
+    border: 1px solid #575a60;
+}
+
+.collection-item img {
+	height: 100%;
+	width: 100%;
+	border-radius: .5em;
+	object-fit: contain;
 }
